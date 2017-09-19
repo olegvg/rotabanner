@@ -1,0 +1,14 @@
+rotabanner:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    db: 0
+  logger:
+    level: 10     # DEBUG level, see https://docs.python.org/2/library/logging.html#levels
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  tornado:
+    host: 127.0.0.1
+    port: 5050
+    debug: !!bool true
+    proc_num: 0   # number of tornado workers, ignored in case of debug. 0 implies num of CPU cores.
+    base_uri: http://127.0.0.1:5050/
